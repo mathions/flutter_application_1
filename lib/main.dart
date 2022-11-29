@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
+import 'screen/HomeScreen.dart';
+import 'screen/RegisterScreen.dart';
 
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Halo',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Aplikasi Flutter Kedua'),
-        ),
-        body: Center(
-          child: Text('Hello Dunia')
-        ),
-      )
-    );
-  }
+void main() {
+  runApp(
+    MaterialApp(
+      home: HomeScreen(),
+      routes: {
+        '/home' : (context) => HomeScreen(),
+        '/register' : (context) => RegisterScreen(),
+      }
+    ) //MaterialApp
+  );
 }
+
